@@ -31,7 +31,8 @@
         // The amount of feed items you want to show
         limit: 10,
         // An array of feed items which you want to use
-        list: []
+        list: [],
+        tmpllocation: 'http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js'
       }, config),
 
       // The data object contains all the feed items
@@ -138,14 +139,13 @@
 
       // Load the jQuery templates plug-in if it wasn't included in the page.
       // At then end we call the load method.
-      if( !jQuery.tmpl ) {
-        jQuery.getScript(
-          "https://raw.github.com/jquery/jquery-tmpl/master/"
-            + "jquery.tmpl.min.js",
-          load);
-      } else {
+      if ( jQuery.tmpl ) // Here we would need to check the version loaded in the page to avoid eventual compatibility probs(tmpl is in beta)
         load();
-      }
+      else
+        $.getScript(setting.tmplocation)
+          .done(load)
+          .fail(function() {
+          })
 
     });
 
