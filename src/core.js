@@ -142,7 +142,7 @@
       if ( jQuery.tmpl ) // Here we would need to check the version loaded in the page to avoid eventual compatibility probs(tmpl is in beta)
         load();
       else
-        $.getScript(setting.tmplocation)
+        $.getScript(settings.tmpllocation)
           .done(load)
           .fail(function() {
           })
