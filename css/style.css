@@ -1,0 +1,10 @@
+/** { margin: 0; padding: 0; }*/
+html {
+	background-color: #000000;
+}
+body {
+	width: 720px;
+	margin: 80px auto;
+	background-color: #aaaaaa;
+	padding: 1em;
+}

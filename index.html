@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mgiulio - My contributions to jQuery Lifestream</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<link href="http://mgiulio.github.com/prjnotes/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="page-wrap">
+	<h1>jQuery Lifestream Plugin</h1>
+	
+	<h2>About the plugin</h2>
+	<p>The jQuery Lifestream plugin by Chris V. ...</p>
+	
+	<h2>My Contributions</h2>
+	<p>Some stats:</p>
+	<ul>
+		<li><a href="https://github.com/christianv/jquery-lifestream/commits/master?author=mgiulio">My commits</a></li>
+		<li><a href="https://github.com/christianv/jquery-lifestream/graphs/impact">Impact graph</a></li>
+	</ul>
+	<p>Here are some notes on my contributions on the plugin:</p>
+	<ul>
+		<li><a href="#da">DeviantArt Support</a></li>
+		<li><a href="#tmpl">Template System</a></li>
+		<li><a href="#bs">Modular Build System</a></li>
+		<li><a href="#cdb">Custom Download Builder</a></li>
+		<li><a href="#misc">Misc</a></li>
+		<li><a href="#"></a></li>
+	</ul>
+	
+	<h2 id="da">DeviantArt Support</h2>
+	<p>YQL</p>
+	<p>Uncomplete:faves.</p>
+	
+	<h2 id="tmpl">Template System</h2>
+	
+	<h2 id="bs">Modular Build System</h2>
+	<p>Interwined with the CDB, as you can se from the issue discussion.
+	<p>Make</p>
+	<p>Jake</p>
+	<p>UglifyJS</p>
+	<p>Node.js</p>
+	<p>jQuery build system</p>
+	
+	<h2 id="cdb">Custom Download Builder</h2>
+	<h3>Motivation</h3>
+	<p>The <a href="http://christianv.github.com/jquery-lifestream/download/">Custom Download Builder</a>(CDB) 
+	is client side only application that generates a minified version of the plugin with only the needed
+	service modules.</p>
+	<p>It was inspired from the Modernizr builder.</p>
+	<p>The client side only requirement posed some challenges.</p>
+	<p>Ajaxfetching of modules</p>
+	<p>Downloadify: limitations</p>
+	<p>
+		To perform the compression/minifaction of the concatenated moduled in the browser I used UglifyJS.
+		But first it needed to be modified to run in the browser because it is targeted at the Node.js
+		platform. Fortunately, the bindings with this platforms are really weaks so it was relatively easy to
+		complete this task. Essentially, I just patched the original source with some hack to simulate the
+		presence of the Node.js module system.<br>
+		It took slightly more time to find a way to avoid to re-apply these patcheseach time we wanted to update the
+		UglifyJS pulling its repository. I split the patches in separate files that are then assembled by the
+		project makefile, so to keep UJS updated it is sufficient to pull it and then make automagically rebuild
+		the pathech UJS to be used in the CDB.
+		
+	</p>
+	
+	<p>cite jui?</p>
+	
+	<p>Deferreds</p>
+	<p>Ajax error handling</p>
+	
+	<h2 id="misc">Misc</h2>
+	<p>Proper use of JSONP</p>
+	
+	<h2>Conclusions</h2>
+	<p>Join the party at ...</p>
+</div> <!-- #page-wrap -->
+
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
+<script>
+	SyntaxHighlighter.all();
+</script>
+</body>
+</html>
