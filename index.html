@@ -1,37 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<title>mgiulio - My contributions to jQuery Lifestream</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
-	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
-	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-	<link href="http://mgiulio.github.com/prjnotes/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>mgiulio - My contributions to jQuery Lifestream</title>
+  <meta name="description" content="mgiulio - My contributions to jQuery Lifestream">
+  <meta name="author" content="Giulio Mainardi">
+  <link rel="author" type="text/plain" href="http://mgiulio.github.com/humans.txt">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+  <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" /> -->
+  <link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
+  
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
+
 <body>
-<div id="page-wrap">
+
+<header>
 	<h1>jQuery Lifestream Plugin</h1>
-	
-	<h2>About the plugin</h2>
+</header>
+
+<section id="about">
 	<p>The jQuery Lifestream plugin by Chris V. ...</p>
-	
-	<h2>My Contributions</h2>
-	<p>Some stats:</p>
-	<ul>
-		<li><a href="https://github.com/christianv/jquery-lifestream/commits/master?author=mgiulio">My commits</a></li>
-		<li><a href="https://github.com/christianv/jquery-lifestream/graphs/impact">Impact graph</a></li>
-	</ul>
-	<p>Here are some notes on my contributions on the plugin:</p>
-	<ul>
+</section>
+
+<section id="contribs">
+	<header>
+		<h2>My Contributions</h2>
+	</header>
+	<ul style="float: left;">
 		<li><a href="#da">DeviantArt Support</a></li>
 		<li><a href="#tmpl">Template System</a></li>
 		<li><a href="#bs">Modular Build System</a></li>
 		<li><a href="#cdb">Custom Download Builder</a></li>
 		<li><a href="#misc">Misc</a></li>
-		<li><a href="#"></a></li>
+	</ul>
+	<ul style="float: left;">
+		<li><a href="https://github.com/christianv/jquery-lifestream/commits/master?author=mgiulio">My commits</a></li>
+		<li><a href="https://github.com/christianv/jquery-lifestream/graphs/impact">Impact graph</a></li>
 	</ul>
 	
-	<h2 id="da">DeviantArt Support</h2>
+	<h2 id="da" style="clear: both;">DeviantArt Support</h2>
 	<p>YQL</p>
 	<p>Uncomplete:faves.</p>
 	
@@ -63,7 +92,7 @@
 		It took slightly more time to find a way to avoid to re-apply these patcheseach time we wanted to update the
 		UglifyJS pulling its repository. I split the patches in separate files that are then assembled by the
 		project makefile, so to keep UJS updated it is sufficient to pull it and then make automagically rebuild
-		the pathech UJS to be used in the CDB.
+			the pathech UJS to be used in the CDB.
 		
 	</p>
 	
@@ -71,19 +100,25 @@
 	
 	<p>Deferreds</p>
 	<p>Ajax error handling</p>
+	<p>Mockjax</p>
 	
 	<h2 id="misc">Misc</h2>
 	<p>Proper use of JSONP</p>
-	
-	<h2>Conclusions</h2>
-	<p>Join the party at ...</p>
-</div> <!-- #page-wrap -->
+</section>
 
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<!-- <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
 <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
-<script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script> -->
+<!-- <script>
 	SyntaxHighlighter.all();
-</script>
+</script> -->
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	 chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+ <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+ <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+  
 </body>
 </html>
