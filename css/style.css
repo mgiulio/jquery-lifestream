@@ -259,20 +259,16 @@ h1, h2 {
 body > header > h1 {
 	margin: 0px 0 30px;
 	padding-left: 74px;
-	font-size: 64px;
+	font-size: 50px;
 	text-shadow: 1px 3px 1px #000;
-}
-body > header> h1 > span {	
-	font-size: 32px;
 }
 body > section > header > h2 {
 	font-size: 20px;
 	margin: 30px 0;
 }
-section#about {
-	margin: 30px;
+#about {
+	margin-top: 60px;
 }
-
 
 
 

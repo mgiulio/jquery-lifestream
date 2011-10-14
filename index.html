@@ -64,29 +64,49 @@
 		<li><a href="https://github.com/christianv/jquery-lifestream/commits/master?author=mgiulio">My commits</a></li>
 		<li><a href="https://github.com/christianv/jquery-lifestream/graphs/impact">Impact graph</a></li>
 	</ul>
+	<div style="clear: both;"></div>
+</section>
+
+<section id="da">	
+	<header>
+		<h2 id="da">DeviantArt Support</h2>
+	</header>
+	<p>
+		Added support for user deviations.
+	</p>
 </section>
 	
-	<h2 id="da" style="clear: both;">DeviantArt Support</h2>
-	<p>Added support for user deviations.</p>
-	
-	<h2 id="tmpl">Template System</h2>
+<section id="tmpl">
+	<header>
+		<h2 id="tmpl">Template System</h2>
+	</header>
 	<p>
 		Implemented with Christian a template system based on 
 		<a href="https://github.com/jquery/jquery-tmpl">jquery-tmpl</a>, a templating plugin for jQuery.
 		In this way the activity messages displayed by the plugin can be customized by the user.
 	</p>
+</section>
 	
-	<h2 id="bs">Modular Build System</h2>
+<section id="bs">
+	<header>
+		<h2 id="bs">Modular Build System</h2>
+	</header>
 	<p>
 		As more contributors joined the project to add support for further services we 
 		decided to split the source code in one file for the core of the plugin a one file 
 		for each supported service.
 	</p>
+	<p>
 		So we needed a build system to concatenate and minify all the source modules.
 		The final result is based on GNU Make, Node.js and UglifyJS. To have a 100% JavaScript 
 		based build system I have also considered Jake.
+	</p>
+</section>
 	
-	<h2 id="cdb">Custom Download Builder</h2>
+<section id="cdb">
+	<header>
+		<h2 id="cdb">Custom Download Builder</h2>
+	</header>
 	<p>
 		The <a href="http://christianv.github.com/jquery-lifestream/download/">Custom Download Builder</a>(CDB) 
 		is client side only application that generates a minified version of the plugin with only the needed
@@ -98,10 +118,10 @@
 		platform. Fortunately, the bindings with this platforms are really weaks so it was relatively easy to
 		complete this task. Essentially, I just patched the original source with some hack to simulate the
 		presence of the Node.js module system.<br>
-		It took slightly more time to find a way to avoid to re-apply these patcheseach time we wanted to update the
-		UglifyJS pulling its repository. I split the patches in separate files that are then assembled by the
+		It took slightly more time to find a way to avoid to re-apply these patches each time we wanted to update the
+		UglifyJS pulling it form its repository. I split the patches in separate files that are then assembled by the
 		project makefile, so to keep UJS updated it is sufficient to pull it and then make automagically rebuild
-		the pathecd UJS to be used in the CDB.
+		the patched UJS to be used in the CDB.
 	</p>
 	<p>
 		To allow the user to download the generated script I used Downloadify. 
